@@ -18,6 +18,12 @@ def hash_password(password: str) -> bytes:
     return hashed
 
 
-def is_valid(hashed_password: bytes, password: str) -> bytes:
-    """checking if the passwords of the two files match"""
+def is_valid(hashed_password: bytes, password: str) -> bool:
+    """
+        checking if the passwords of the two files match
+        Args:
+            hashed_password: bytes
+            password: str
+        returns bool
+    """
     return bcrypt.checkpw(password.encode(), hashed_password)

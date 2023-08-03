@@ -16,3 +16,8 @@ def hash_password(password: str) -> bytes:
     encoded_password = password.encode()
     hashed = bcrypt.hashpw(encoded_password, bcrypt.gensalt())
     return hashed
+
+
+def is_valid(hashed_password: bytes, password: str) -> bytes:
+    """checking if the passwords of the two files match"""
+    return bcrypt.checkpw(password.encode(), hashed_password)

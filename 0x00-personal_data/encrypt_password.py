@@ -11,7 +11,7 @@
 import bcrypt
 
 
-def hash_password(password: str) -> str:
+def hash_password(password: str) -> bytes:
     """hashing the password using bycrypt"""
     encoded_password = password.encode()
     hashed = bcrypt.hashpw(encoded_password, bcrypt.gensalt())

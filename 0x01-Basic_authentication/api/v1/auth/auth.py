@@ -9,16 +9,13 @@ class Auth:
     def __init__(self) -> None:
         pass
 
-
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """public method that returns false"""
         return False
 
-
     def authorization_header(self, request=None) -> str:
         """setting up the authorization headers"""
         return None
-
 
     def current_user(self, request=None) -> TypeVar('User'):
         """method to returnn the current authorised user"""

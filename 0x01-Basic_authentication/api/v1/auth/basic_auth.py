@@ -23,6 +23,7 @@ class BasicAuth(Auth):
     def decode_base64_authorization_header(self,
                                            base64_authorization_header:
                                            str) -> str:
+        """decoding the heading from base64 to ascii code"""
         if base64_authorization_header is None:
             return None
         if not isinstance(base64_authorization_header, str):

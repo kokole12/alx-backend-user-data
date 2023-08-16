@@ -2,6 +2,8 @@
 """
     implementing a sqlalchemy model to create the table users
 """
+
+
 from sqlalchemy import String, Integer, Column
 from sqlalchemy.ext.declarative import declarative_base
 

@@ -14,6 +14,7 @@ Base = declarative_base()
 class User(Base):
     """implementing the table"""
     __tablename__ = "users"
+
     id = Column(Integer, primary_key=True)
     email = Column(String(250), nullable=False)
     hashed_passsword = Column(String(250), nullable=False)

@@ -46,7 +46,7 @@ class Auth:
         passwd = password.encode('utf-8')
         return bcrypt.checkpw(passwd, user_pass)
 
-    def create_session(self, email: str) ->  str:
+    def create_session(self, email: str) -> str:
         """creating the session id for the login users"""
         try:
             user = self._db.find_user_by(email=email)

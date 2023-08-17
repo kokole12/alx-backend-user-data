@@ -55,7 +55,7 @@ def logout() -> str:
 def profile() -> str:
     """getting the user profile"""
     session_id = request.cookies.get('session_id')
-    user =  Auth.get_user_from_session_id(session_id)
+    user = Auth.get_user_from_session_id(session_id)
     if user:
         return jsonify({"email": user.email}), 200
     abort(403)

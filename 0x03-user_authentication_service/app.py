@@ -32,7 +32,7 @@ def login() -> str:
     """implementing the user login"""
     email = request.form.get('email')
     password = request.form.get('password')
-    if not Auth.valid_login(email=email, password=password):
+    if not Auth.valid_login(email, password):
         abort(401)
     session_id = Auth.create_session(email)
     resp = jsonify({"email": f"{email}", "message": "logged in"})
